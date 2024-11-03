@@ -1,22 +1,19 @@
-// Transaction.java
 package com.project_name.entities;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 import java.util.UUID;
 
 public class Transaction {
-    private UUID accountId;             // Идентификатор счета
-    private double transactionAmount;    // Сумма транзакции
-    private LocalDateTime transactionTime; // Время транзакции
+    private UUID accountId;
+    private long transactionAmount;
+    private Instant transactionTime;
 
-    // Конструктор
-    public Transaction(UUID accountId, double transactionAmount) {
+    public Transaction(UUID accountId, long transactionAmount) {
         this.accountId = accountId;
         this.transactionAmount = transactionAmount;
-        this.transactionTime = LocalDateTime.now(); // Устанавливаем текущее время
+        this.transactionTime = Instant.now();
     }
 
-    // Геттеры и сеттеры
     public UUID getAccountId() {
         return accountId;
     }
@@ -25,19 +22,19 @@ public class Transaction {
         this.accountId = accountId;
     }
 
-    public double getTransactionAmount() {
+    public long getTransactionAmount() {
         return transactionAmount;
     }
 
-    public void setTransactionAmount(double transactionAmount) {
+    public void setTransactionAmount(long transactionAmount) {
         this.transactionAmount = transactionAmount;
     }
 
-    public LocalDateTime getTransactionTime() {
+    public Instant getTransactionTime() {
         return transactionTime;
     }
 
-    public void setTransactionTime(LocalDateTime transactionTime) {
+    public void setTransactionTime(Instant transactionTime) {
         this.transactionTime = transactionTime;
     }
 }

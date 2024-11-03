@@ -1,4 +1,4 @@
-// DataSourceErrorLog.java
+
 package com.project_name.entities;
 
 public class DataSourceErrorLog {
@@ -6,14 +6,13 @@ public class DataSourceErrorLog {
     private String message;             // Сообщение об ошибке
     private String methodSignature;     // Сигнатура метода, в котором возникла ошибка
 
-    // Конструктор
+
     public DataSourceErrorLog(String stackTraceText, String message, String methodSignature) {
         this.stackTraceText = stackTraceText;
         this.message = message;
         this.methodSignature = methodSignature;
     }
 
-    // Геттеры и сеттеры
     public String getStackTraceText() {
         return stackTraceText;
     }

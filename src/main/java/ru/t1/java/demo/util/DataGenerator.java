@@ -1,4 +1,3 @@
-// src/main/java/com/project_name/util/DataGenerator.java
 package com.project_name.util;
 
 import com.project_name.entities.Account;
@@ -24,12 +23,14 @@ public class DataGenerator {
     public void generateData() {
         for (int i = 0; i < 10; i++) {
             UUID clientId = UUID.randomUUID();
-            Account account = new Account(clientId, Account.AccountType.DEBIT, Math.random() * 10000);
+            long initialBalance = (long) (Math.random() * 100000);
+            Account account = new Account(clientId, Account.AccountType.DEBIT, initialBalance);
             accountRepository.saveAccount(account);
 
-            // Создаем транзакции для каждого аккаунта
+
             for (int j = 0; j < 5; j++) {
-                transactionService.processTransaction(clientId, Math.random() * 1000 - 500); // случайные значения
+                long transactionAmount = (long) (Math.random() * 10000 - 5000);
+                transactionService.processTransaction(clientId, transactionAmount);
             }
         }
     }

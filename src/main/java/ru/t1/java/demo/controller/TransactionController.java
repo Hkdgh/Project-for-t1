@@ -1,4 +1,3 @@
-// src/main/java/com/project_name/controllers/TransactionController.java
 package com.project_name.controllers;
 
 import com.project_name.entities.Transaction;
@@ -16,11 +15,11 @@ public class TransactionController {
     @Autowired
     private TransactionService transactionService;
 
-    // Создать новую транзакцию
     @PostMapping
     public ResponseEntity<Transaction> createTransaction(@RequestBody Transaction transaction) {
         try {
-            Transaction newTransaction = transactionService.processTransaction(transaction.getAccountId(), transaction.getTransactionAmount());
+            Transaction newTransaction = transactionService.processTransaction(
+                    transaction.getAccountId(), transaction.getTransactionAmount());
             return ResponseEntity.ok(newTransaction);
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();

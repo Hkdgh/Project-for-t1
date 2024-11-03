@@ -1,10 +1,10 @@
-// src/main/java/com/project_name/repositories/DataSourceErrorLogRepository.java
-package com.project_name.repositories;
+package ru.t1.java.demo.repository;
 
-import com.project_name.entities.DataSourceErrorLog;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import com.project_name.entities.DataSourceErrorLog;
 
 @Repository
-public interface DataSourceErrorLogRepository extends CrudRepository<DataSourceErrorLog, Long> {
+public interface DataSourceErrorLogRepository extends JpaRepository<DataSourceErrorLog, Long> {
+
 }

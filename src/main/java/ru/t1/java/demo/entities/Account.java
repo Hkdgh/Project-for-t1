@@ -1,26 +1,22 @@
-// Account.java
 package com.project_name.entities;
 
 import java.util.UUID;
 
 public class Account {
-    private UUID clientId;             // Идентификатор клиента
-    private AccountType accountType;    // Дебетовый или кредитный счет
-    private double balance;             // Баланс счета
+    private UUID clientId;
+    private AccountType accountType;
+    private long balance;
 
-    // Перечисление для типа счета
     public enum AccountType {
         DEBIT, CREDIT
     }
 
-    // Конструктор
-    public Account(UUID clientId, AccountType accountType, double balance) {
+    public Account(UUID clientId, AccountType accountType, long balance) {
         this.clientId = clientId;
         this.accountType = accountType;
         this.balance = balance;
     }
 
-    // Геттеры и сеттеры
     public UUID getClientId() {
         return clientId;
     }
@@ -37,11 +33,11 @@ public class Account {
         this.accountType = accountType;
     }
 
-    public double getBalance() {
+    public long getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(long balance) {
         this.balance = balance;
     }
 }

@@ -1,20 +1,22 @@
-// src/main/java/com/project_name/aspects/LoggingAspect.java
-package com.project_name.aspects;
+
+package ru.t1.java.demo.aspects;
 
 import com.project_name.entities.DataSourceErrorLog;
 import com.project_name.repositories.DataSourceErrorLogRepository;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class LoggingAspect {
+class LoggingAspect {
 
-    @Autowired
-    private DataSourceErrorLogRepository errorLogRepository;
+    private final DataSourceErrorLogRepository errorLogRepository;
+
+    public LoggingAspect(DataSourceErrorLogRepository errorLogRepository) {
+        this.errorLogRepository = errorLogRepository;
+    }
 
     @Pointcut("@annotation(com.project_name.aspects.LogDataSourceError)")
     public void logDataSourceErrorPointcut() {}

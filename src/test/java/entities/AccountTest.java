@@ -1,4 +1,4 @@
-// src/test/java/com/project_name/entities/AccountTest.java
+
 package com.project_name.entities;
 
 import org.junit.jupiter.api.Test;

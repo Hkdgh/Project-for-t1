@@ -1,4 +1,3 @@
-// src/main/java/com/project_name/controllers/AccountController.java
 package com.project_name.controllers;
 
 import com.project_name.entities.Account;
@@ -16,21 +15,18 @@ public class AccountController {
     @Autowired
     private AccountRepository accountRepository;
 
-    // Получить аккаунт по ID
     @GetMapping("/{id}")
     public ResponseEntity<Account> getAccountById(@PathVariable UUID id) {
         Account account = accountRepository.getAccount(id);
         return account != null ? ResponseEntity.ok(account) : ResponseEntity.notFound().build();
     }
 
-    // Создать новый аккаунт
     @PostMapping
     public ResponseEntity<Account> createAccount(@RequestBody Account account) {
         accountRepository.saveAccount(account);
         return ResponseEntity.ok(account);
     }
 
-    // Обновить баланс аккаунта
     @PutMapping("/{id}")
     public ResponseEntity<Account> updateAccountBalance(@PathVariable UUID id, @RequestBody Account updatedAccount) {
         Account account = accountRepository.getAccount(id);
@@ -42,7 +38,6 @@ public class AccountController {
         return ResponseEntity.ok(account);
     }
 
-    // Удалить аккаунт
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteAccount(@PathVariable UUID id) {
         if (accountRepository.getAccount(id) != null) {
