@@ -1,17 +1,17 @@
-package com.project_name.entities;
+package ru.t1.java.demo.entities;
 
 import java.util.UUID;
 
 public class Account {
     private UUID clientId;
     private AccountType accountType;
-    private long balance;
+    private double balance; // Изменено на double
 
     public enum AccountType {
         DEBIT, CREDIT
     }
 
-    public Account(UUID clientId, AccountType accountType, long balance) {
+    public Account(UUID clientId, AccountType accountType, double balance) {
         this.clientId = clientId;
         this.accountType = accountType;
         this.balance = balance;
@@ -33,11 +33,11 @@ public class Account {
         this.accountType = accountType;
     }
 
-    public long getBalance() {
+    public double getBalance() { // Изменено на double
         return balance;
     }
 
-    public void setBalance(long balance) {
+    public void setBalance(double balance) { // Изменено на double
         this.balance = balance;
     }
 }

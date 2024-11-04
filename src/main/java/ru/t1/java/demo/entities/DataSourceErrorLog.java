@@ -1,24 +1,44 @@
+package ru.t1.java.demo.entities;
 
-package com.project_name.entities;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class DataSourceErrorLog {
-    private String stackTraceText;      // Текст стектрейса исключения
-    private String message;             // Сообщение об ошибке
-    private String methodSignature;     // Сигнатура метода, в котором возникла ошибка
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    public DataSourceErrorLog(String stackTraceText, String message, String methodSignature) {
-        this.stackTraceText = stackTraceText;
+    private String stackTrace;
+    private String message;
+    private String methodSignature;
+
+    public DataSourceErrorLog() {
+    }
+
+    public DataSourceErrorLog(String stackTrace, String message, String methodSignature) {
+        this.stackTrace = stackTrace;
         this.message = message;
         this.methodSignature = methodSignature;
     }
 
-    public String getStackTraceText() {
-        return stackTraceText;
+    public Long getId() {
+        return id;
     }
 
-    public void setStackTraceText(String stackTraceText) {
-        this.stackTraceText = stackTraceText;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getStackTrace() {
+        return stackTrace;
+    }
+
+    public void setStackTrace(String stackTrace) {
+        this.stackTrace = stackTrace;
     }
 
     public String getMessage() {

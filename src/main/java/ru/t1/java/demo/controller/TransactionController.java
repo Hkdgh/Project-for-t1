@@ -1,7 +1,7 @@
-package com.project_name.controllers;
+package ru.t1.java.demo.controllers;
 
-import com.project_name.entities.Transaction;
-import com.project_name.services.TransactionService;
+import ru.t1.java.demo.entities.Transaction;
+import ru.t1.java.demo.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

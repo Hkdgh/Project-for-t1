@@ -1,8 +1,7 @@
-
 package ru.t1.java.demo.aspects;
 
-import com.project_name.entities.DataSourceErrorLog;
-import com.project_name.repositories.DataSourceErrorLogRepository;
+import ru.t1.java.demo.entities.DataSourceErrorLog;
+import ru.t1.java.demo.repository.DataSourceErrorLogRepository;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;

@@ -2,7 +2,7 @@ package ru.t1.java.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.project_name.entities.DataSourceErrorLog;
+import ru.t1.java.demo.entities.DataSourceErrorLog;
 
 @Repository
 public interface DataSourceErrorLogRepository extends JpaRepository<DataSourceErrorLog, Long> {

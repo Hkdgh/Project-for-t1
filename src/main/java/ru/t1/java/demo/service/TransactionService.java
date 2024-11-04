@@ -1,8 +1,8 @@
-package com.project_name.services;
+package ru.t1.java.demo.service;
 
-import com.project_name.entities.Account;
-import com.project_name.entities.Transaction;
-import com.project_name.repositories.AccountRepository;
+import ru.t1.java.demo.entities.Account;
+import ru.t1.java.demo.entities.Transaction;
+import ru.t1.java.demo.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.UUID;

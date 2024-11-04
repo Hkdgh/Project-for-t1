@@ -1,7 +1,7 @@
-package com.project_name.controllers;
+package ru.t1.java.demo.controllers;
 
-import com.project_name.entities.Account;
-import com.project_name.repositories.AccountRepository;
+import ru.t1.java.demo.entities.Account;
+import ru.t1.java.demo.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

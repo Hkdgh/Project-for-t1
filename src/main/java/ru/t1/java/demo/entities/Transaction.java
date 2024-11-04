@@ -1,4 +1,4 @@
-package com.project_name.entities;
+package ru.t1.java.demo.entities;
 
 import java.time.Instant;
 import java.util.UUID;
